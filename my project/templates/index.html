@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Climate Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Climate Assistant 🌍</h1>
+        <p>Describe your climate-related problem below:</p>
+        <form method="post">
+            <textarea name="problem" placeholder="e.g., I see thick smoke in the sky..." required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        {% if response %}
+        <div class="response">
+            <h3>AI Response:</h3>
+            <p>{{ response }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
