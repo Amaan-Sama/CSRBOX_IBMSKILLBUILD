@@ -8,7 +8,7 @@ from langchain_core.messages import HumanMessage
 app = Flask(__name__)
 
 # Set Gemini API Key
-os.environ["GOOGLE_API_KEY"] = "AIzaSyCRkOSg57jYT4IPg0jwKGJxQdO84q_HoTM"
+os.environ["GOOGLE_API_KEY"] = "Enter_Your_Gemini_Key"
 
 llm = ChatGoogleGenerativeAI(model="models/gemini-1.5-flash-latest", temperature=0.2)
 
